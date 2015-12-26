@@ -11,7 +11,7 @@ namespace TranscendenceChatServer.Core
         private Notifications()
         {
             Hub = NotificationHubClient.CreateClientFromConnectionString(
-                "Endpoint=sb://transcendence-notification.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wOHgy6KnfeRHapuy2iiWvOnhb/yJtFTEWBVbRCad+Io=",
+                "Endpoint=sb://transcendence-notification.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=DyQ5ZODDJQV1E6QXW9zF9vmtyctoJtKzVOPAyoPHMio=",
                 "transcendence-notification");
         }
     }

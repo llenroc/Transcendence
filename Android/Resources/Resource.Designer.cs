@@ -469,7 +469,7 @@ namespace TranscendenceChat
 			global::com.refractored.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::TranscendenceChat.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
 			global::com.refractored.Resource.Dimension.abc_text_size_title_material = global::TranscendenceChat.Resource.Dimension.abc_text_size_title_material;
 			global::com.refractored.Resource.Dimension.abc_text_size_title_material_toolbar = global::TranscendenceChat.Resource.Dimension.abc_text_size_title_material_toolbar;
-
+			
 			global::com.refractored.Resource.Dimension.disabled_alpha_material_dark = global::TranscendenceChat.Resource.Dimension.disabled_alpha_material_dark;
 			global::com.refractored.Resource.Dimension.disabled_alpha_material_light = global::TranscendenceChat.Resource.Dimension.disabled_alpha_material_light;
 			global::com.refractored.Resource.Dimension.highlight_alpha_material_colored = global::TranscendenceChat.Resource.Dimension.highlight_alpha_material_colored;

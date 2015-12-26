@@ -32,8 +32,8 @@ namespace TranscendenceChat
 	public class TranscendenceGcmService : GcmServiceBase
 	{
 		const string hubName = "transcendence-notification";
-		const string connectionPath = "Endpoint=sb://transcendence-notification.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=wOHgy6KnfeRHapuy2iiWvOnhb/yJtFTEWBVbRCad+Io=";
-		const string sharedAccessKey = "wOHgy6KnfeRHapuy2iiWvOnhb/yJtFTEWBVbRCad+Io=";
+		const string connectionPath = "Endpoint=sb://transcendence-notification.servicebus.windows.net/;SharedAccessKeyName=DefaultFullSharedAccessSignature;SharedAccessKey=DyQ5ZODDJQV1E6QXW9zF9vmtyctoJtKzVOPAyoPHMio=";
+		const string sharedAccessKey = "DyQ5ZODDJQV1E6QXW9zF9vmtyctoJtKzVOPAyoPHMio=";
 		const string ServiceBus = "sb://transcendence-notification.servicebus.windows.net";
 
 
