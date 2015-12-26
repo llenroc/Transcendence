@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E033292C-1101-44F4-867D-083EF8DB215F}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TranscendenceChat</RootNamespace>
+    <AssemblyName>TranscendenceChat.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>dccf627f</NuGetPackageImportStamp>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <Debugger>Xamarin</Debugger>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="AndHUD">
+      <HintPath>..\Components\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="UrlImageViewHelper">
+      <HintPath>..\Components\urlimageviewhelper-1.0.4\lib\android\UrlImageViewHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\packages\PCLCrypto.1.0.86\lib\monoandroid\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.27.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.27.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.0.0\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.0.0\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.CurrentActivity">
+      <HintPath>..\packages\Plugin.CurrentActivity.1.0.0\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.1.1.1\lib\MonoAndroid10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.1.1.1\lib\MonoAndroid10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.2.0.1\lib\MonoAndroid10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.2.0.1\lib\MonoAndroid10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.FloatingActionButton">
+      <HintPath>..\packages\Refractored.FloatingActionButton.1.4.0\lib\MonoAndroid10\Refractored.FloatingActionButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.PagerSlidingTabStrip">
+      <HintPath>..\packages\Refractored.PagerSlidingTabStrip.1.0.10\lib\MonoAndroid10\Refractored.PagerSlidingTabStrip.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\packages\WebSocket4Net.0.14.1\lib\monoandroid23\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\packages\Validation.2.2.8\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.3\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.0.0\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.0.0\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Console\WebSocketConnection.cs">
+      <Link>Infrastructure\WebSocketConnection.cs</Link>
+    </Compile>
+    <Compile Include="BaseActivity.cs" />
+    <Compile Include="Controls\ObservableAdapaterBase.cs" />
+    <Compile Include="Controls\CircleDrawable.cs" />
+    <Compile Include="ConversationActivity.cs" />
+    <Compile Include="Infrastructure\UIThreadDispacher.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="NetworkChangeReceiver.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WelcomeActivity.cs" />
+    <Compile Include="Fragments\Signup\ConfirmationFragment.cs" />
+    <Compile Include="Fragments\Signup\GetStartedFragment.cs" />
+    <Compile Include="Fragments\Signup\WelcomeFragment.cs" />
+    <Compile Include="Adapters\ConversationAdapter.cs" />
+    <Compile Include="TranscendenceApplication.cs" />
+    <Compile Include="Helpers\MessageDialogs.cs" />
+    <Compile Include="Controls\CircleImageView.cs" />
+    <Compile Include="Helpers\Utils.cs" />
+    <Compile Include="Adapters\FriendAdapter.cs" />
+    <Compile Include="Fragments\MainSections\ConversationsFragment.cs" />
+    <Compile Include="Fragments\MainSections\FriendsFragment.cs" />
+    <Compile Include="Fragments\MainSections\ProfileFragment.cs" />
+    <Compile Include="Adapters\AvatarAdapter.cs" />
+    <Compile Include="Controls\SquareImageView.cs" />
+    <Compile Include="Fragments\BaseFragment.cs" />
+    <Compile Include="PushNotifications\PushNotifications.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\toolbar.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\fragment_welcome.axml" />
+    <AndroidResource Include="Resources\layout\fragment_get_started.axml" />
+    <AndroidResource Include="Resources\layout\fragment_confirmation.axml" />
+    <AndroidResource Include="Resources\anim\enter.xml" />
+    <AndroidResource Include="Resources\anim\exit.xml" />
+    <AndroidResource Include="Resources\anim\pop_enter.xml" />
+    <AndroidResource Include="Resources\anim\pop_exit.xml" />
+    <AndroidResource Include="Resources\layout\dialog_ask_text.axml" />
+    <AndroidResource Include="Resources\layout\item_friend.axml" />
+    <AndroidResource Include="Resources\layout\item_conversation.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\layout\activity_welcome.axml" />
+    <AndroidResource Include="Resources\layout\activity_conversation_messages.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\fragment_conversations.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\item_conversation_msg_incoming.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\item_conversation_msg_outgoing.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\fragment_friends.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\layout\fragment_profile.axml" />
+    <AndroidResource Include="Resources\menu\profile.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_camera.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_camera.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_camera.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_camera.png" />
+    <AndroidResource Include="Resources\layout\item_avatar.axml" />
+    <AndroidResource Include="Resources\menu\friends.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\default_photo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\default_photo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\default_photo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\default_photo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_link.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_link.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_link.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_link.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_content_link.png" />
+    <AndroidResource Include="Resources\values-sw600dp\integers.xml" />
+    <AndroidResource Include="Resources\layout\item_task.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_notification.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_notification.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_notification.png" />
+    <AndroidResource Include="Resources\drawable\red_gradient.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\blue_gradient.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\tab_layout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\integers.xml" />
+    <AndroidResource Include="Resources\values\arrays.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <Content Include="Properties\_SettingsStarted.txt" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_content_add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_content_add.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_content_add.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_content_add.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_editor_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_editor_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_editor_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_editor_attach_file.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_editor_attach_file.png" />
+    <AndroidResource Include="Resources\layout\item_conversation_msg_image_icoming.axml" />
+    <AndroidResource Include="Resources\layout\item_conversation_msg_image_outgoing.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_stat_social_reply.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_stat_social_reply.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_stat_social_reply.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_stat_social_reply.png" />
+    <AndroidResource Include="Resources\values\attrs.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_profile_save.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_profile_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_profile_save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_profile_save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_incoming.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_outgoing.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_incoming.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_outgoing.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_incoming.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_outgoing.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_incoming.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_outgoing.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_status_sent.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_status_sent.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_status_sent.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_status_seen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_status_seen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_status_seen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_status_seen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_status_sending.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_status_sending.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_status_sending.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_status_sending.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\msg_status_sending.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_status_sent.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\msg_status_sent.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\msg_status_delivered.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\msg_status_delivered.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\msg_status_delivered.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\msg_status_delivered.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\msg_status_delivered.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\msg_status_seen.png" />
+    <AndroidResource Include="Resources\drawable\contact_photo_background.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_send.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_send.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_send.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_send.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_tab_chats.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_tab_chats.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_tab_chats.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_tab_chats.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_tab_contacts.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_tab_contacts.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_tab_contacts.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_tab_contacts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_tab_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_edit.png" />
+    <AndroidResource Include="Resources\drawable\ic_red_circle.png" />
+    <AndroidResource Include="Resources\drawable\ic_blue_circle.png" />
+    <AndroidResource Include="Resources\drawable\ic_profile_take_photo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_edit.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_edit.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_edit.png" />
+    <AndroidResource Include="Resources\drawable\bg_messages.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="packages\SQLitePCL.raw_basic.0.7.1\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('packages\SQLitePCL.raw_basic.0.7.1\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.7.1\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.7.1\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.8.4\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.4\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ProjectReference Include="..\SharedClient\SharedClient.csproj">
+      <Project>{B4A997C0-D6CF-4872-AC64-3425229BAD51}</Project>
+      <Name>SharedClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TranscendenceChat.ServerClient\TranscendenceChat.ServerClient.csproj">
+      <Project>{302ACDE4-76E7-47A0-9291-A7D75E263E7B}</Project>
+      <Name>TranscendenceChat.ServerClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <Version>1.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="urlimageviewhelper">
+      <Version>1.0.4</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="GCMClient">
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <AndroidEnvironment Include="environment.txt" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>

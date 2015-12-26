@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="TranscendenceChatWorkerRole" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="TranscendenceChat.WorkerRole.SocketServer">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="CommonServiceBusConnectionString" value="Endpoint=sb://transcendence-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=GVFDwh/4b+uCNskMQvG86USdBuK7z1cXcFTkREGlTCc=" />
+      <Setting name="InternalServiceBusConnectionString" value="Endpoint=sb://transcendence-messaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=GVFDwh/4b+uCNskMQvG86USdBuK7z1cXcFTkREGlTCc=" />
+      <Setting name="RedisMessagesConnectionString" value="transcendence.redis.cache.windows.net,password=NzKn2UR5+B34SBaRA2nOSVstP6AbjmaUG3DZS93agC8=,syncTimeout=10000" />
+      <Setting name="RedisSessionsConnectionString" value="transcendence.redis.cache.windows.net,password=NzKn2UR5+B34SBaRA2nOSVstP6AbjmaUG3DZS93agC8=,syncTimeout=10000" />
+      <Setting name="Standalone" value="false" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
