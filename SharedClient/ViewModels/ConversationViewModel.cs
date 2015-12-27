@@ -220,11 +220,14 @@ namespace TranscendenceChat
         {
             uiThreadDispacher.Dispatch(() =>
                 {
-                    opponentTypingController.HandleIncomingMessage();
-                    App.ConversationsViewModel.IsDirty = true;
-                    Messages.Add(MessageViewModelFactory.Create(e.Message));
-                    //if conversation is opened!
-                    MarkMessagesAsSeenAsync(new List<Message> { e.Message });
+                    if (e.Message.Sender == Friend.FriendId)
+                    {
+                        opponentTypingController.HandleIncomingMessage();
+                        App.ConversationsViewModel.IsDirty = true;
+                        Messages.Add(MessageViewModelFactory.Create(e.Message));
+                        //if conversation is opened!
+                        MarkMessagesAsSeenAsync(new List<Message> { e.Message });
+                    }
                 });
         }
 

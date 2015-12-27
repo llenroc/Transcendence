@@ -469,7 +469,10 @@ namespace TranscendenceChat
 			global::com.refractored.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::TranscendenceChat.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
 			global::com.refractored.Resource.Dimension.abc_text_size_title_material = global::TranscendenceChat.Resource.Dimension.abc_text_size_title_material;
 			global::com.refractored.Resource.Dimension.abc_text_size_title_material_toolbar = global::TranscendenceChat.Resource.Dimension.abc_text_size_title_material_toolbar;
-			
+			global::com.refractored.Resource.Dimension.dialog_fixed_height_major = global::TranscendenceChat.Resource.Dimension.dialog_fixed_height_major;
+			global::com.refractored.Resource.Dimension.dialog_fixed_height_minor = global::TranscendenceChat.Resource.Dimension.dialog_fixed_height_minor;
+			global::com.refractored.Resource.Dimension.dialog_fixed_width_major = global::TranscendenceChat.Resource.Dimension.dialog_fixed_width_major;
+			global::com.refractored.Resource.Dimension.dialog_fixed_width_minor = global::TranscendenceChat.Resource.Dimension.dialog_fixed_width_minor;
 			global::com.refractored.Resource.Dimension.disabled_alpha_material_dark = global::TranscendenceChat.Resource.Dimension.disabled_alpha_material_dark;
 			global::com.refractored.Resource.Dimension.disabled_alpha_material_light = global::TranscendenceChat.Resource.Dimension.disabled_alpha_material_light;
 			global::com.refractored.Resource.Dimension.highlight_alpha_material_colored = global::TranscendenceChat.Resource.Dimension.highlight_alpha_material_colored;
@@ -849,7 +852,7 @@ namespace TranscendenceChat
 			global::com.refractored.Resource.Style.Platform_Widget_AppCompat_Spinner = global::TranscendenceChat.Resource.Style.Platform_Widget_AppCompat_Spinner;
 			global::com.refractored.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::TranscendenceChat.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
 			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::TranscendenceChat.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			
+			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow = global::TranscendenceChat.Resource.Style.RtlOverlay_Widget_AppCompat_ActionButton_Overflow;
 			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::TranscendenceChat.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
 			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::TranscendenceChat.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
 			global::com.refractored.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::TranscendenceChat.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
