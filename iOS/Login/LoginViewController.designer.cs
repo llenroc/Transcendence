@@ -18,9 +18,6 @@ namespace TranscendenceChat.iOS
 		UIKit.UIButton BoyButton { get; set; }
 
 		[Outlet]
-		UIKit.UIImageView BubbleImg { get; set; }
-
-		[Outlet]
 		UIKit.NSLayoutConstraint BubbleImgTopOffset { get; set; }
 
 		[Outlet]
@@ -47,23 +44,22 @@ namespace TranscendenceChat.iOS
 		[Outlet]
 		UIKit.UIView ThemeSelectorContainerView { get; set; }
 
+		[Outlet]
+		UILabel GetStartedLabel { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (BoyButton != null) {
 				BoyButton.Dispose ();
 				BoyButton = null;
 			}
-			if (BubbleImg != null) {
-				BubbleImg.Dispose ();
-				BubbleImg = null;
-			}
-			if (BubbleImgTopOffset != null) {
-				BubbleImgTopOffset.Dispose ();
-				BubbleImgTopOffset = null;
-			}
 			if (ContinueBtn != null) {
 				ContinueBtn.Dispose ();
 				ContinueBtn = null;
+			}
+			if (GetStartedLabel != null) {
+				GetStartedLabel.Dispose ();
+				GetStartedLabel = null;
 			}
 			if (GirlButton != null) {
 				GirlButton.Dispose ();

@@ -71,21 +71,21 @@ namespace TranscendenceChat.iOS
 
 			#region Theme switcher
 
-			BoyButton.SetTitle("Red", UIControlState.Normal);
-			GirlButton.SetTitle("Blue", UIControlState.Normal);
+			BoyButton.SetTitle("Blue", UIControlState.Normal);
+			GirlButton.SetTitle("Red", UIControlState.Normal);
 
-			BoyButton.TouchUpInside += RedThemeSelected;
-			GirlButton.TouchUpInside += BlueThemeSelected;
+			BoyButton.TouchUpInside += BlueThemeSelected;
+			GirlButton.TouchUpInside += RedThemeSelected;
 
 			ThemeSelectorContainerView.BackgroundColor = Theme.Current.BackgroundColor;
 
 			SausageButtons.SetUp (BoyButton);
-			SausageButtons.ApplyTheme(AppDelegate.RedTheme, BoyButton);
-			SausageButtons.UpdateBackgoundColor(AppDelegate.RedTheme, BoyButton);
+			SausageButtons.ApplyTheme(AppDelegate.BlueTheme, BoyButton);
+			SausageButtons.UpdateBackgoundColor(AppDelegate.BlueTheme, BoyButton);
 
 			SausageButtons.SetUp (GirlButton);
-			SausageButtons.ApplyTheme(AppDelegate.BlueTheme, GirlButton);
-			SausageButtons.UpdateBackgoundColor(AppDelegate.BlueTheme, GirlButton);
+			SausageButtons.ApplyTheme(AppDelegate.RedTheme, GirlButton);
+			SausageButtons.UpdateBackgoundColor(AppDelegate.RedTheme, GirlButton);
 			#endregion
 
 			UpdateText ();
@@ -147,13 +147,14 @@ namespace TranscendenceChat.iOS
 
 			SwitchSignUpType.Font = Theme.Current.SausageSwitchIdentityButtonFont;
 			UIColor switchSignUpTypeColor = UIColor.FromPatternImage (ImageUtils.GetGradientImage (
-				Theme.Current.MainGradientStartColor.CGColor, Theme.Current.MainGradientEndColor.CGColor, SwitchSignUpType.Bounds.Size));
+				Theme.Current.MainGradientEndColor.CGColor, Theme.Current.MainGradientStartColor.CGColor, SwitchSignUpType.Bounds.Size));
 			SwitchSignUpType.SetTitleColor (switchSignUpTypeColor, UIControlState.Normal);
 			SwitchSignUpType.Layer.BorderColor = switchSignUpTypeColor.CGColor;
 
-			BubbleImg.Image = Theme.Current.SignUpIcon.ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate);
-			BubbleImg.TintColor = UIColor.FromPatternImage(ImageUtils.GetGradientImage (
-				Theme.Current.MainGradientStartColor.CGColor, Theme.Current.MainGradientEndColor.CGColor, BubbleImg.Image.Size));
+			GetStartedLabel.Font = Theme.Current.BadgeValueFont;
+			CGSize getStartedLabelSize = GetStartedLabel.Text.StringSize (GetStartedLabel.Font);
+			GetStartedLabel.TextColor = UIColor.FromPatternImage(ImageUtils.GetGradientImage (
+				Theme.Current.MainGradientStartColor.CGColor, Theme.Current.MainGradientEndColor.CGColor, getStartedLabelSize));
 		}
 
 		async void ContinueHandler (object sender, EventArgs e)
@@ -301,29 +302,6 @@ namespace TranscendenceChat.iOS
 		public override void ViewDidLayoutSubviews ()
 		{
 			base.ViewDidLayoutSubviews ();
-
-			var ratio = NavBarBlendView.Bounds.Height / blendViewNormalHeight;
-			if (ratio < 1) {
-				if (bubbleWidhtConstraint != null || bubbleHeightConstraint != null)
-					return;
-
-				bubbleWidhtConstraint = SetConstant (BubbleImg, NSLayoutAttribute.Width, ratio * BubbleImg.IntrinsicContentSize.Width);
-				bubbleHeightConstraint = SetConstant (BubbleImg, NSLayoutAttribute.Height, ratio * BubbleImg.IntrinsicContentSize.Height);
-
-				bubbleTopNormalOffset = BubbleImgTopOffset.Constant;
-				BubbleImgTopOffset.Constant -= (blendViewNormalHeight - BubbleImg.IntrinsicContentSize.Height) * (1 - ratio) / 2;
-				BubbleImgTopOffset.Constant = NMath.Max (BubbleImgTopOffset.Constant, 0);
-
-			} else {
-				if (bubbleWidhtConstraint == null || bubbleHeightConstraint == null)
-					return;
-
-				BubbleImg.RemoveConstraint (bubbleWidhtConstraint);
-				BubbleImg.RemoveConstraint (bubbleHeightConstraint);
-				bubbleWidhtConstraint = bubbleHeightConstraint = null;
-
-				BubbleImgTopOffset.Constant = bubbleTopNormalOffset;
-			}
 
 			View.LayoutIfNeeded ();
 		}

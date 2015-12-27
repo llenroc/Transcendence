@@ -53,15 +53,19 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IJ-Ci-7Vc" misplaced="YES">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inner6Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fRN-7n-756" misplaced="YES">
-                                        <rect key="frame" x="105" y="9" width="110" height="93"/>
-                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="18" id="354" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center" text="Get Started" misplaced="YES">
+                                        <rect key="frame" x="116" y="70" width="180" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="fRN-7n-756" secondAttribute="centerX" id="5ZQ-Qa-Cgd"/>
-                                    <constraint firstItem="fRN-7n-756" firstAttribute="top" secondItem="1IJ-Ci-7Vc" secondAttribute="top" constant="9" id="5ao-WE-yKv"/>
                                     <constraint firstAttribute="height" constant="146" id="Pmb-vA-jla"/>
+                                    <constraint id="372" firstItem="1IJ-Ci-7Vc" firstAttribute="centerX" secondItem="354" secondAttribute="centerX"/>
+                                    <constraint id="373" firstItem="354" firstAttribute="top" secondItem="1IJ-Ci-7Vc" secondAttribute="top" constant="30"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nick name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="03S-1h-lc1" misplaced="YES">
@@ -150,8 +154,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="BoyButton" destination="bMM-ew-EoP" id="ERH-tT-xAS"/>
-                        <outlet property="BubbleImg" destination="fRN-7n-756" id="518-tN-nzV"/>
-                        <outlet property="BubbleImgTopOffset" destination="5ao-WE-yKv" id="wJu-Ld-McN"/>
                         <outlet property="ContinueBtn" destination="ixF-ja-hif" id="D2N-y8-7dF"/>
                         <outlet property="GirlButton" destination="Lhp-5X-Dll" id="vuW-fM-cly"/>
                         <outlet property="Input" destination="38i-kN-DOA" id="Snh-tB-Had"/>
@@ -161,6 +163,7 @@
                         <outlet property="SwitchSignUpType" destination="qD1-F4-scz" id="8pz-HN-EYQ"/>
                         <outlet property="ThemeSelectorContainerView" destination="LUz-8t-1IV" id="bP9-cs-Wcm"/>
                         <segue destination="rla-ZT-OoF" kind="push" identifier="ConfirmationSegueId" id="seW-8B-1R9"/>
+                        <outlet property="GetStartedLabel" destination="354" id="name-outlet-354"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNW-19-aeg" userLabel="First Responder" sceneMemberID="firstResponder"/>

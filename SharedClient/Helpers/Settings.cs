@@ -90,7 +90,7 @@ namespace TranscendenceChat
 		const long KeyValidUntilDefault = 0;
 
 		const string AppThemeKey = "theme_key";
-		const int AppThemeDefault = (int)AppTheme.Red;
+		const int AppThemeDefault = (int)AppTheme.Blue;
 
 		const string AvatarKey = "avatar_key";
 		static string AvatarDefault = string.Empty;
