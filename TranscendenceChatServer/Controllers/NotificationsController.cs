@@ -23,6 +23,7 @@ namespace TranscendenceChatServer.Controllers
                 { "username", fromUserName },
                 { "message", message},
                 { "usericon", iconUrl},
+                { "nameandmsg", fromUserName + " says:\n\"" + message + "\""},
                 
             };
             await Notifications.Instance.Hub.SendTemplateNotificationAsync(notification, userTag);
