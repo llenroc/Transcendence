@@ -228,7 +228,7 @@ namespace TranscendenceChat
 							Friends.Add (newFriend);
 							FriendsSemaphore.Release ();
 							await userManager.SendUserInvite (search);
-							RaiseNotification ("Your friend hasn't signed up for Transcendence Chat yet. We have sent them an invite!", "Friend Request Sent");
+							RaiseNotification ("Your friend hasn't signed up for Inner 6 Chat yet. We have sent them an invite!", "Friend Request Sent");
 							App.Logger.Track ("FriendRequestSent");
 							return;
 						}

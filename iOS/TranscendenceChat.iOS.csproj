@@ -560,5 +560,6 @@
     <BundleResource Include="Resources\VarelaRound-Regular.ttf" />
     <BundleResource Include="Resources\ComicNeue-Regular.otf" />
     <BundleResource Include="Resources\ComicNeue_Bold.otf" />
+    <BundleResource Include="Resources\bg_messages.jpg" />
   </ItemGroup>
 </Project>

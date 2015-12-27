@@ -49,7 +49,7 @@ namespace TranscendenceChat.iOS
 		{
 			var timestampAttributes = new UIStringAttributes { 
 				ForegroundColor = Theme.Current.IncomingTextColor,
-				BackgroundColor = UIColor.White,
+				BackgroundColor = UIColor.Clear,
 				Font = Theme.Current.MessageFont
 			};
 			MessageViewModel message = viewModel.Messages [indexPath.Row];
@@ -61,11 +61,12 @@ namespace TranscendenceChat.iOS
 		public override NSAttributedString GetCellBottomLabelAttributedText (MessagesCollectionView collectionView, NSIndexPath indexPath)
 		{
 			MessageViewModel message = viewModel.Messages [indexPath.Row];
-			if (!message.IsIncoming) 
+			bool isLastMessage = viewModel.Messages.Count > 0 && indexPath.Row == viewModel.Messages.Count - 1;
+			if (!message.IsIncoming && (isLastMessage || message.Status != MessageStatus.Seen)) 
 			{
 				var messageStatusAttributes = new UIStringAttributes { 
 					ForegroundColor = Theme.Current.IncomingTextColor,
-					BackgroundColor = UIColor.White,
+					BackgroundColor = UIColor.Clear,
 					Font = Theme.Current.MessageFont
 				};
 				var messageStatus = new NSAttributedString (GetMessageStatus(message), messageStatusAttributes);
@@ -162,9 +163,12 @@ namespace TranscendenceChat.iOS
 
 			this.CollectionView.CollectionViewLayout.SpringinessEnabled = false;
 
-			/**
-		     *  Load up our fake data for the demo
-		     */
+			UIImageView backgroundImageView = new UIImageView(UIImage.FromFile("bg_messages.jpg"));
+			backgroundImageView.Alpha = 0.5f;
+			CollectionView.BackgroundView = backgroundImageView;
+			//CollectionView.InsertSubview (backgroundImage, 0);
+			//UIImage backgroundImage = UIImage.FromFile("bg_messages.jpg");
+			//CollectionView.BackgroundColor = UIColor.FromPatternImage(backgroundImage);
 			CollectionView.CollectionViewLayout.IncomingAvatarViewSize = CoreGraphics.CGSize.Empty;
 			CollectionView.CollectionViewLayout.OutgoingAvatarViewSize = CoreGraphics.CGSize.Empty;
 			CollectionView.CollectionViewLayout.MessageBubbleFont = Theme.Current.MessageFont;
